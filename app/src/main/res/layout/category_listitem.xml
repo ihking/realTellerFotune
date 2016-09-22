@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="99.7dp"
+        android:scaleType="fitXY"
+        android:id="@+id/placeImage"/>
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="92.4dp"
+        android:layout_marginTop="7.3dp"
+        android:background="@mipmap/blacklayer"
+        android:id="@+id/placeGra"
+        />
+
+
+    <ImageView
+        android:layout_width="24.3dp"
+        android:layout_height="30.3dp"
+        android:background="@mipmap/placeholder"
+        android:layout_marginTop="62dp"
+        android:layout_marginLeft="14.7dp"/>
+
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:background="@mipmap/heart"
+        android:focusable="false"
+        android:layout_marginLeft="331dp"
+        android:layout_marginTop="10.7dp"
+        android:id="@+id/heart"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="64dp"
+        android:textSize="16.7sp"
+        android:text="마포갈비"
+        android:textColor="#ffffff"
+        android:id="@+id/placeTitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="43.7dp"
+        android:layout_marginTop="85.7dp"
+        android:textSize="9.3sp"
+        android:textColor="#ffffff"
+        android:text="서울특별시 서초구 서초동 1301-1"
+        android:id="@+id/placeAdd"/>
+
+
+
+</FrameLayout>

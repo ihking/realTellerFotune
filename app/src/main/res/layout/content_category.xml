@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="만남의 목적을 선택해주세요!"
+        android:textSize="14sp"
+        android:textColor="@color/azul"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="100dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+            android:layout_marginRight="6.7dp"
+
+            android:background="@mipmap/dugeun_btn"
+            android:id="@+id/category1"
+            >
+
+        </Button>
+
+        <Button
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+
+            android:background="@mipmap/sogeun_btn"
+            android:id="@+id/category2"
+           >
+
+        </Button>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.7dp"
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+            android:layout_marginRight="6.7dp"
+
+            android:background="@mipmap/yummy_btn"
+            android:id="@+id/category3"
+            >
+
+        </Button>
+
+        <Button
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+
+            android:background="@mipmap/bari_btn"
+            android:id="@+id/category4"
+           >
+
+        </Button>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
