@@ -1,7 +1,6 @@
 package com.example.han.compass.login;
 
 import android.content.Intent;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,7 +16,6 @@ import com.kakao.util.helper.log.Logger;
 public class LoginActivity extends AppCompatActivity {
 
     private SessionCallback callback;
-    private LocationManager locationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

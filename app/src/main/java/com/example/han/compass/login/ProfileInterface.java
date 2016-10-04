@@ -2,6 +2,8 @@ package com.example.han.compass.login;
 
 import com.example.han.compass.utils.Repo_UserList;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -21,5 +23,9 @@ public interface ProfileInterface {
     @FormUrlEncoded
     @POST("/users/getAll")
     public Call <Repo_UserList> getAll(@Field("userId") String userId);
+
+    @FormUrlEncoded
+    @POST("/rooms/add/getProfile/new")
+    public Call <Repo_UserList> addGetProfileNew(@Field("userList") ArrayList<String> userList);
 }
 

@@ -1,9 +1,13 @@
 package com.example.han.compass.login;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
@@ -22,6 +26,7 @@ import retrofit2.Response;
 
 public class KaKaoSignUpActivity extends AppCompatActivity {
     private LocationManager locationManager;
+    MyLocationListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,14 @@ public class KaKaoSignUpActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_ka_kao_sign_up);
 
         getMyLocation();
-        requestMe();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                requestMe();
+            }
+        }, 1000);
+
     }
 
     private void requestMe() {
@@ -74,21 +86,21 @@ public class KaKaoSignUpActivity extends AppCompatActivity {
     //gps 값 가져오기
     private void getMyLocation() {
         if (locationManager == null) {
-            locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+            locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         }
         // provider 기지국||GPS 를 통해서 받을건지 알려주는 Stirng 변수
         // minTime 최소한 얼마만의 시간이 흐른후 위치정보를 받을건지 시간간격을 설정 설정하는 변수
         // minDistance 얼마만의 거리가 떨어지면 위치정보를 받을건지 설정하는 변수
         // manager.requestLocationUpdates(provider, minTime, minDistance, listener);
 
-        // 10초
-        long minTime = 10000;
+        // 0.01초
+        long minTime = 100;
 
         // 거리는 0으로 설정
         // 그래서 시간과 거리 변수만 보면 움직이지않고 10초뒤에 다시 위치정보를 받는다
         float minDistance = 0;
 
-        MyLocationListener listener = new MyLocationListener();
+        listener = new MyLocationListener();
 
 //        // 허가 확인
 //        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -103,13 +115,23 @@ public class KaKaoSignUpActivity extends AppCompatActivity {
 //        }
 
 
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, minTime, minDistance, listener);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, listener);
         System.out.println("도착");
     }
 
 
-    private void profileRequest(final String name, final String profile, final double latitude, final double longitude ) {
+    private void profileRequest(final String name, final String profile, final double latitude, final double longitude) {
         final ProfileInterface profileService = ProfileAdapter.getInstance();//create(ApiInterface.class);
 
         String accessToken = SharedPreferenceUtil.getSharedPreference(getApplicationContext(), "accessToken");
@@ -130,10 +152,9 @@ public class KaKaoSignUpActivity extends AppCompatActivity {
                 SharedPreferenceUtil.putSharedPreference(getApplicationContext(), "profile", kakao.getUser().getProfile());
                 SharedPreferenceUtil.putSharedPreference(getApplicationContext(), "userId", kakao.getUser().get_id());
 
-                if(kakao.getUser().getName().equals(R.string.network_assignExisted)){   // 이미 있는 id인 경우
+                if (kakao.getUser().getName().equals(R.string.network_assignExisted)) {   // 이미 있는 id인 경우
                     redirectMainActivity();
-                }
-                else{   // 처음 로그인 하는 경우
+                } else {   // 처음 로그인 하는 경우
                     redirectMainActivity();
                 }
             }
@@ -158,4 +179,22 @@ public class KaKaoSignUpActivity extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (locationManager != null) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
+            locationManager.removeUpdates(listener);
+            locationManager = null;
+        }
+    }
 }

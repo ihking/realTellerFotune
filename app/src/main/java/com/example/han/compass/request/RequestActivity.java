@@ -6,6 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.han.compass.R;
+import com.example.han.compass.utils.Repo_User;
+
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class RequestActivity extends AppCompatActivity {
 
@@ -19,14 +23,17 @@ public class RequestActivity extends AppCompatActivity {
 //            "", "" };
 
     CircleDrawing circleDraw;
+    ArrayList<Repo_User> userList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
 
+        userList = getProfileList();
+
         circleDraw = (CircleDrawing) findViewById(R.id.chart1);
-        circleDraw.start();
+        circleDraw.start(RequestActivity.this, userList);
 //      예전 오픈소스 활용했을 떄 코드
 //        mChart = (PieChart) findViewById(R.id.chart1);
 //        mChart.setExtraOffsets(5,5,5,5);
@@ -107,5 +114,21 @@ public class RequestActivity extends AppCompatActivity {
 //        mChart.setData(data);
 //    }
 
+
+
+    private ArrayList<Repo_User> getProfileList() {
+
+        GetProfileAsyncTask asyncTask = new GetProfileAsyncTask();
+        try {
+//            userList = asyncTask.execute().get();
+            return asyncTask.execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return new ArrayList<>();
+    }
 
 }

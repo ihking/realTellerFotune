@@ -13,10 +13,10 @@ import android.widget.Toast;
 
 import com.example.han.compass.MyApplication;
 import com.example.han.compass.R;
-import com.example.han.compass.request.RequestActivity;
 import com.example.han.compass.adapter.CustomMemberAdapter;
 import com.example.han.compass.login.ProfileAdapter;
 import com.example.han.compass.login.SharedPreferenceUtil;
+import com.example.han.compass.request.RequestActivity;
 import com.example.han.compass.utils.Repo_User;
 import com.example.han.compass.utils.Repo_UserList;
 
@@ -133,6 +133,9 @@ public class SelectMemberActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         networkDelayed(profileCall);
+
+        MyApplication.invite_idList.clear();
+        MyApplication.invite_idList.add(SharedPreferenceUtil.getSharedPreference(getApplicationContext(), "_id"));
     }
 
     @Override
@@ -148,7 +151,6 @@ public class SelectMemberActivity extends AppCompatActivity {
         super.onDestroy();
 //        if (mHandler != null)
 //            mHandler.removeCallbacks(mRunnable);
-        MyApplication.invite_idList.clear();
     }
 
 }
