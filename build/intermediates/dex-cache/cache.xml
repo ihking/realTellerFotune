@@ -1,3 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_515d62a43face7e26e5021695f2f8cd89980c7df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="14e854ca1262d981e1ffddc571a653c2e7aab8c1">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-util-1.1.21_33ce3d5f2c579b4c9e3e04bc48c8177051ff7fb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_8f8fc23226aa622bf99732b86d6d4afecab0c75f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_154b6f4787d9702b44169d6d437ec0994dd15db5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7fa38efa7a37b25b726f166e73791230f1f2f562">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_79d9a87095cfe61a0f6aa8301ed91e4e6fab4e42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta3/8bff75d7360aaa3866f1e6949c877dfcc2b3d3e2/converter-gson-2.0.0-beta3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8bff75d7360aaa3866f1e6949c877dfcc2b3d3e2">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta3_97e528a9596856f24d7a4bd9fd6f8badb4179592.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/kakaolink/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cb0e8dd57f3ba75cf14e9d08e5c67e4428cd60f7">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-kakaolink-1.1.21_c44b450f2df39098730ca3328da97b87c91f7b05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/network/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7170922a4a9d0feae6c673100a62c3b7ce0815e">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-network-1.1.21_ba6caa65e5da4cf7872a830f2654b7d49e7684b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/gson-2.4_8d2ec08d16347bded20cb670a49ca1d04ace157c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/kakaotalk/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3953ed31a5de54e9525fb78d16b25f35190ad9e6">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-kakaotalk-1.1.21_fa708b4478718eaa5a94dd81a70fc8915a62b049.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_671ab2ce46355475a32d91e3fe0b08373476ae4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/glide-3.6.0_349d814c053a78f77697e227b2ea28193f5b06d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_e1d7c40f31193083cb38f012576ef50b8971f246.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_d987f46f28566ef420be43b101d07e434cc857bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/okio-1.8.0_e71af196f7a5b5fa37db6d8b2fc46ad90a6c567f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_f6aea62f4aa054455e1a66d7441f667db5e7cd62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/friends/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5834668ada9452568b590391dc26995b1ec0f19b">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-friends-1.1.21_2b7b6bb0cccf100377a85573505875a17e4362d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_7ba3e5c47d5ae15479cb85c370918e14cf1d2566.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/usermgmt/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aec10398a6b02b32fac2ad4c8adb8d0b7bcec1c6">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-usermgmt-1.1.21_d21d483c00d55a93ee58037aff8845106892487e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_5d2aa3d84c4eb7f6c63cd393bea983f92f850a8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_36f89077ef98ac98f837ad037496aaa5bf3e997d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_3668d74ffe5a399496fcb33d68c83d72731c361e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.21/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="962a4dbd39c9c0c91f70a02699ebf5eafddff84f">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-auth-1.1.21_5b076a0eb70ccb6ca95837453bff5659096b757c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2384438920f75743e847b87ce4d80aaf6cc586f1">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/instant-run_0b82aea62e8ad02d87661483b225601c85675d66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/sjnam/android_studio_workspace/realTellerFotune/app/libs/libDaumMapAndroid.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a2ca14c67023cf9dfb7f79261593e4c014675ac6">
+        <dex dex="/Users/sjnam/android_studio_workspace/realTellerFotune/app/build/intermediates/pre-dexed/debug/libDaumMapAndroid_9e3ff8c17ee3cfa95c9b83badb3328fb8737ae81.jar" />
+    </item>
+
+</items>

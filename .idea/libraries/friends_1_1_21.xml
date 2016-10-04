@@ -5,6 +5,8 @@
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/friends/1.1.21/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/friends/1.1.21/54977bd90817a06c31e4d42a72902143bda7d995/friends-1.1.21-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

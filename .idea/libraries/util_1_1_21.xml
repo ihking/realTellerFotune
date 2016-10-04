@@ -5,6 +5,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.21/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/util/1.1.21/5403b18c2d5ea6ec2d5ba0d41277fd5664dfada4/util-1.1.21-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

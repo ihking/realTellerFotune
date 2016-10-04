@@ -5,6 +5,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/network/1.1.21/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/network/1.1.21/a38376d00edb351788e5f21de77327a1dedc9da9/network-1.1.21-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

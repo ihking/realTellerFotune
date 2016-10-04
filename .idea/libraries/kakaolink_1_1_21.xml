@@ -5,6 +5,8 @@
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/kakaolink/1.1.21/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/kakaolink/1.1.21/573ed3af856c91b6546858927fcb31edd2bf4167/kakaolink-1.1.21-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

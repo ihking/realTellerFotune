@@ -5,6 +5,8 @@
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.21/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/auth/1.1.21/b1f748f57bfb121a704591d5d6cf1ae8bed0ce43/auth-1.1.21-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
