@@ -18,7 +18,7 @@ public interface ProfileInterface {
 
     @FormUrlEncoded
     @POST("/users/login")
-    public Call <Kakao> userLogin(@Field("name") String name, @Field("profile") String profile, @Field("accessToken") String accessToken, @Field("latitude") double latitude, @Field("longitude") double longitude);
+    public Call <Kakao> userLogin(@Field("name") String name, @Field("profile") String profile, @Field("profile") String home, @Field("accessToken") String accessToken, @Field("latitude") double latitude, @Field("longitude") double longitude);
 
     @FormUrlEncoded
     @POST("/users/getAll")

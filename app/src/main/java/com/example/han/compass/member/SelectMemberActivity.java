@@ -63,7 +63,10 @@ public class SelectMemberActivity extends AppCompatActivity {
             }
         });
 
-                // 더미 자료들
+        MyApplication.invite_idList.add(SharedPreferenceUtil.getSharedPreference(getApplicationContext(), "_id"));
+
+
+        // 더미 자료들
 //        // ListView에 아이템 추가
 //        for(int i=0 ; i<1 ;i++){
 //            Repo_User temp = new Repo_User();
@@ -134,8 +137,7 @@ public class SelectMemberActivity extends AppCompatActivity {
         super.onResume();
         networkDelayed(profileCall);
 
-        MyApplication.invite_idList.clear();
-        MyApplication.invite_idList.add(SharedPreferenceUtil.getSharedPreference(getApplicationContext(), "_id"));
+        member_Adapter.notifyDataSetChanged();
     }
 
     @Override
@@ -151,6 +153,8 @@ public class SelectMemberActivity extends AppCompatActivity {
         super.onDestroy();
 //        if (mHandler != null)
 //            mHandler.removeCallbacks(mRunnable);
+
+        MyApplication.invite_idList.clear();
     }
 
 }

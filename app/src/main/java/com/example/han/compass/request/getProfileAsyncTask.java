@@ -17,7 +17,7 @@ import retrofit2.Call;
  * Created by sjnam on 2016. 10. 3..
  */
 
-public class GetProfileAsyncTask extends AsyncTask<Void, Void, ArrayList<Repo_User>> {
+class GetProfileAsyncTask extends AsyncTask<Void, Void, ArrayList<Repo_User>> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();

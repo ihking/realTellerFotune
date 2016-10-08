@@ -21,6 +21,8 @@ public class Searcher {
     // http://dna.daum.net/apis/local
 	public static final String DAUM_MAPS_LOCAL_KEYWORD_SEARCH_API_FORMAT = "https://apis.daum.net/local/v1/search/keyword.json?query=%s&location=%f,%f&radius=%d&page=%d&apikey=%s";
 	public static final String DAUM_MAPS_LOCAL_CATEGORY_SEARCH_API_FORMAT = "https://apis.daum.net/local/v1/search/category.json?code=%s&location=%f,%f&radius=%d&page=%d&apikey=%s";
+	public static final String DAUM_MAPS_HOME_SEARCH_API_FORMAT = "https://apis.daum.net/local/geo/coord2addr?apikey=%s&longitude=%f&latitude=%f&inputCoordSystem=%s&output=json";
+
 	/** category codes
 	MT1 대형마트
 	CS2 편의점
@@ -47,9 +49,11 @@ public class Searcher {
 	private static final String HEADER_VALUE_X_PLATFORM_ANDROID = "android";
 	
 	OnFinishSearchListener onFinishSearchListener;
+	OnFinishHomeListener onFinishHomeListener;
 	SearchTask searchTask;
+	SearchHomeTask searchHomeTask;
 	String appId;
-	
+
 	private class SearchTask extends AsyncTask<String, Void, Void> {
 		@Override
 		protected Void doInBackground(String... urls) {
@@ -64,6 +68,27 @@ public class Searcher {
 					onFinishSearchListener.onFail();
 				} else {
 					onFinishSearchListener.onSuccess(itemList);
+				}
+			}
+			return null;
+		}
+	}
+
+	// 아직은 합치기 무서워서 분리해놓음
+	private class SearchHomeTask extends AsyncTask<String, Void, Void> {
+		@Override
+		protected Void doInBackground(String... urls) {
+			String url = urls[0];
+			Map<String, String> header = new HashMap<String, String>();
+			header.put(HEADER_NAME_X_APPID, appId);
+			header.put(HEADER_NAME_X_PLATFORM, HEADER_VALUE_X_PLATFORM_ANDROID);
+			String json = fetchData(url, header);
+			HomeItem home = parseHome(json);
+			if (onFinishHomeListener != null) {
+				if (home == null) {
+					onFinishHomeListener.onFail();
+				} else {
+					onFinishHomeListener.onSuccess(home);
 				}
 			}
 			return null;
@@ -101,7 +126,25 @@ public class Searcher {
 		searchTask = new SearchTask();
 		searchTask.execute(url);
 	}
-    
+
+	// 좌표값에서 주소 찾기
+	public void searchHomeFromPosition(Context applicationContext, String apikey, double latitude, double longitude, String inputCoordSystem, OnFinishHomeListener onFinishHomeListener) {
+		this.onFinishHomeListener = onFinishHomeListener;
+
+		if (searchHomeTask != null) {
+			searchHomeTask.cancel(true);
+			searchHomeTask = null;
+		}
+
+		if (applicationContext != null) {
+			appId = applicationContext.getPackageName();
+		}
+		String url = buildHomeSearchAPIUrlString(apikey, latitude, longitude, inputCoordSystem);
+		searchHomeTask = new SearchHomeTask();
+		searchHomeTask.execute(url);
+	}
+
+
 	private String buildKeywordSearchApiUrlString(String query, double latitude, double longitude, int radius, int page, String apikey) {
     	String encodedQuery = "";
 		try {
@@ -114,6 +157,12 @@ public class Searcher {
 	
 	private String buildCategorySearchApiUrlString(String categoryCode, double latitude, double longitude, int radius, int page, String apikey) {
 		return String.format(DAUM_MAPS_LOCAL_CATEGORY_SEARCH_API_FORMAT, categoryCode, latitude, longitude, radius, page, apikey);
+	}
+
+
+	// 좌표값으로 주소찾기
+	private String buildHomeSearchAPIUrlString(String apikey, double latitude, double longitude, String inputCoordSystem) {
+		return String.format(DAUM_MAPS_HOME_SEARCH_API_FORMAT, apikey, longitude, latitude, inputCoordSystem);
 	}
 	
 	private String fetchData(String urlString, Map<String, String> header) {
@@ -174,7 +223,23 @@ public class Searcher {
 		}
 		return itemList;
 	}
-	
+
+
+	private HomeItem parseHome(String jsonString) {
+		HomeItem item = new HomeItem();
+		try {
+			JSONObject object = new JSONObject(jsonString);
+
+				item.fullName = object.getString("fullName");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		return item;
+	}
+
+
 	public void cancel() {
 		if (searchTask != null) {
 			searchTask.cancel(true);

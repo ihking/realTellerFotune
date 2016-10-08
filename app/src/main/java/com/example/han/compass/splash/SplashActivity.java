@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         Glide.with(this).load(R.mipmap.splash).crossFade().into(imageViewTarget);
 
         Handler hd = new Handler();
-        hd.postDelayed(new splashhandler() , 1000);
+        hd.postDelayed(new splashhandler() , 100);
     }
 
     private class splashhandler implements Runnable{

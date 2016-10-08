@@ -19,6 +19,16 @@ public class MyApplication extends Application {
     public static String accessToken = "";
     public static ArrayList<String> invite_idList;
 
+    // sharedPreference 변수 설정
+    public static String _id = "_id";
+    public static String name = "name";
+    public static String profile = "profile";
+    public static String userId = "userId";
+    public static String home = "home";
+    public static String latitude = "latitude";
+    public static String longitude = "longitude";
+
+
     private static volatile MyApplication obj = null;
     private static volatile Activity currentActivity = null;
 

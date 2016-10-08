@@ -17,12 +17,15 @@ import android.widget.ListView;
 
 import com.example.han.compass.category.CategoryActivity;
 import com.example.han.compass.login.LoginActivity;
+import com.example.han.compass.login.SharedPreferenceUtil;
 import com.example.han.compass.member.SelectMemberActivity;
+import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
+import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+        implements NavigationView.OnNavigationItemSelectedListener {
     private ListView m_ListView;
     private CustomAdapter m_Adapter;
     //private ArrayAdapter<String> m_Adapter;
@@ -62,13 +65,29 @@ public class MainActivity extends AppCompatActivity
         navHeaderLayout.findViewById(R.id.setting).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserManagement.requestLogout(new LogoutResponseCallback() {
+                UserManagement.requestUnlink(new UnLinkResponseCallback() {
                     @Override
-                    public void onCompleteLogout() {
-                        //로그아웃 성공 후 하고싶은 내용 코딩 ~
+                    public void onSessionClosed(ErrorResult errorResult) {
+
+                    }
+
+                    @Override
+                    public void onNotSignedUp() {
+
+                    }
+
+                    @Override
+                    public void onSuccess(Long result) {
                         redirectLogoutActivity();
                     }
                 });
+//                UserManagement.requestLogout(new LogoutResponseCallback() {
+//                    @Override
+//                    public void onCompleteLogout() {
+//                        //로그아웃 성공 후 하고싶은 내용 코딩 ~
+//                        redirectLogoutActivity();
+//                    }
+//                });
             }
         });
 
@@ -157,6 +176,12 @@ public class MainActivity extends AppCompatActivity
 
     protected void redirectLogoutActivity() {
         final Intent intent = new Intent(this, LoginActivity.class);
+
+        SharedPreferenceUtil.putSharedPreference(getApplicationContext(), MyApplication._id, "");
+        SharedPreferenceUtil.putSharedPreference(getApplicationContext(), MyApplication.name, "");
+        SharedPreferenceUtil.putSharedPreference(getApplicationContext(), MyApplication.profile, "");
+        SharedPreferenceUtil.putSharedPreference(getApplicationContext(), MyApplication.userId, "");
+
         startActivity(intent);
         finish();
     }

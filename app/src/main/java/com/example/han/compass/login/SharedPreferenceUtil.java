@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 public class SharedPreferenceUtil {
     static Context mContext;
 
+
     public SharedPreferenceUtil(Context c) {
         mContext = c;
     }
@@ -34,4 +35,5 @@ public class SharedPreferenceUtil {
 
         return prefs.getString(key, "");
     }
+
 }
